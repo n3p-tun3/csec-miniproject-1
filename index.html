@@ -7,7 +7,7 @@
 <body>
   <div class="container">
     <div class="image">
-      <img src="./img.jpg" alt="profile" />
+      <img src="./assets/img.jpg" alt="profile" />
     </div>
     <div class="content">
       <h1>Hi! I'm Naol</h1>
@@ -19,9 +19,9 @@
           Portfolio Website
         </button>
       </a>
-        <a href="#contact">
+        <a href="./assets/Naol-Adinew-Resume.pdf">
           <button>
-          Contact me
+          Download Resume
           </button>
         </a>
     </div>
@@ -32,10 +32,23 @@
   <form>
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-    <button type="submit">Send Message</button>
+    <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+    <small id="char-count">
+      0 / 300
+    </small>
+    <button id="submit-btn">Send Message</button>
   </form>
 </div>
   </div>
+  
+  <script>
+  const message = document.getElementById("message");
+  const counter = document.getElementById("char-count");
+  const max = 300;
+
+  message.addEventListener("input", () => {
+    counter.textContent = `${message.value.length} / ${max}`;
+  });
+</script>
 </body>
 </html>
