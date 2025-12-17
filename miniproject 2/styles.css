@@ -1,0 +1,270 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    header .title {
+      font-size: 1.2rem;
+      font-weight: 300;
+      text-transform: capitalize;
+    }
+
+    .profile-section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .profile-image {
+      flex-shrink: 0;
+    }
+
+    .profile-image img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #2c3e50;
+    }
+
+    .profile-bio {
+      flex: 1;
+    }
+
+    .profile-bio h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .profile-bio p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .profile-links {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .profile-links a {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      margin-right: 1rem;
+      margin-top: 0.5rem;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 400;
+    }
+
+    .profile-links a:hover {
+      background-color: #2980b9;
+    }
+
+    .skills-section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .skills-section h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+      text-transform: uppercase;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .skill-card {
+      background-color: #ecf0f1;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+
+    .skill-card:nth-child(1) {
+      background-color: #e8f4f8;
+    }
+
+    .skill-card:nth-child(2) {
+      background-color: #fef5e7;
+    }
+
+    .skill-card:nth-child(3) {
+      background-color: #f4ecf7;
+    }
+
+    .skill-card:nth-child(4) {
+      background-color: #e8f8f5;
+    }
+
+    .contact-section {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-section h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      padding: 0.8rem;
+      font-size: 1rem;
+      font-family: 'Roboto', Arial, sans-serif;
+      border: 2px solid #bdc3c7;
+      border-radius: 5px;
+    }
+
+    .contact-section input:focus,
+    .contact-section textarea:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+
+    .char-count {
+      display: block;
+      text-align: right;
+      font-size: 0.85rem;
+      color: #7f8c8d;
+      margin-top: -0.5rem;
+    }
+
+    .contact-section button {
+      padding: 0.9rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+
+    .contact-section button:hover {
+      background-color: #34495e;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    footer p {
+      font-size: 0.95rem;
+    }
+
+    footer .name {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .profile-image img {
+        width: 150px;
+        height: 150px;
+      }
+
+      .profile-bio p {
+        text-align: center;
+      }
+
+      .profile-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-links a {
+        margin-right: 0;
+        width: 100%;
+        max-width: 250px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-section {
+        margin: 2rem 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 2rem 1rem;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .skills-section h2,
+      .contact-section h2 {
+        font-size: 1.5rem;
+      }
+  }

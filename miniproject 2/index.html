@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naol Adinew - Profile</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Naol Adinew</h1>
+    <p class="title">Full-Stack Developer</p>
+  </header>
+
+  <section class="profile-section">
+    <div class="profile-image">
+      <img src="./assets/img.jpg" alt="Profile Pic">
+    </div>
+    <div class="profile-bio">
+      <h2>About Me</h2>
+      <p>I am a full-stack developer focused on making clean and practical apps that work well. I enjoy solving problems through code and building projects that make a difference.</p>
+      <p>Currently a freshman at ASTU, exploring software development through hands-on projects and continuously learning new technologies to expand my skill set.</p>
+      <div class="profile-links">
+        <a href="https://pyrrho.dev">Portfolio Website</a>
+        <a href="./assets/Naol-Adinew-Resume.pdf">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML & CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Full-Stack Development</div>
+      <div class="skill-card">Problem Solving</div>
+    </div>
+  </section>
+  
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" rows="5" maxlength="300" required></textarea>
+      <small class="char-count" id="char-count">0 / 300</small>
+      <button type="submit" id="submit-btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p><span class="name">Naol Adinew</span></p>
+    <p>&copy; 2025 All rights reserved.</p>
+  </footer>
+
+  <script>
+    const message = document.getElementById("message");
+    const counter = document.getElementById("char-count");
+    const max = 300;
+
+    message.addEventListener("input", () => {
+      counter.textContent = `${message.value.length} / ${max}`;
+    });
+  </script>
+</body>
+</html>
